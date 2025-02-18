@@ -26,7 +26,7 @@ tipos_cobertura = ['cobertura_adicional', 'cobertura_garantizada']  # Lista de t
 # Directorio base
 
 base_dir = 'C:/Users/fhuillca/Desktop/Mapas inter-disueltos/'
-ruta_shp_dis = 'C:/Users/fhuillca/Documents/DPRC/Análisis Regulatorio/Checa tu señal/GEO OSIPTEL/info empresas/z-distritos/DISTRITOS.shp'
+ruta_shp_dis = '/z-distritos/DISTRITOS.shp'
 dis = gpd.read_file(ruta_shp_dis)
 dis_km2 = dis.to_crs('EPSG:32718')
 # DataFrame acumulativo para todas las combinaciones
