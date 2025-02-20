@@ -24,11 +24,11 @@ tipos_cobertura = ['cobertura_adicional', 'cobertura_garantizada']  # Lista de t
 #tipos_cobertura = ['cobertura_garantizada']  # Lista de tipos de cobertura
 
 # Directorio base
-
 base_dir = 'C:/Users/fhuillca/Desktop/Mapas inter-disueltos/'
 ruta_shp_dis = '/z-distritos/DISTRITOS.shp'
 dis = gpd.read_file(ruta_shp_dis)
 dis_km2 = dis.to_crs('EPSG:32718')
+
 # DataFrame acumulativo para todas las combinaciones
 df_final = dis[['UBIGEO', 'DEPARTAMEN', 'PROVINCIA', 'DISTRITO']].copy()
 
@@ -84,12 +84,6 @@ for tecnologia in tecnologias:
         df_final.to_excel(output_excel1, index=False)
         print(f'Archivo Excel guardado en: {output_excel1}')
 
-        """ for index, valor_unico in valores_unicos.iterrows():
-            ubigeo = valor_unico['UBIGEO']
-            departamento = valor_unico['DEPARTAMEN']
-            provincia = valor_unico['PROVINCIA']
-            distrito = valor_unico['DISTRITO']
-            area = valor_unico[f'area_km2-{tecnologia}-{tipo_cobertura}'] """
 
 # Guardar el DataFrame final en un solo archivo Excel
 output_excel = os.path.join(base_dir, "area-cubierta-total.xlsx")
