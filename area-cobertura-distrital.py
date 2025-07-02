@@ -17,8 +17,7 @@ import geopandas as gpd
 import pandas as pd
 import os
 
-# Lista de empresas, tecnologías y tipos de cobertura
-empresas = ['bitel', 'claro', 'entel', 'movistar']  # Lista de nombres de empresas
+
 tecnologias = ['2g', '3g', '4g', '5g']  # Lista de tecnologías
 #tecnologias = ['2g']  # Lista de tecnologías
 tipos_cobertura = ['cobertura_adicional', 'cobertura_garantizada']  # Lista de tipos de cobertura
