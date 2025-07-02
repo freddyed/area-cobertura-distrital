@@ -12,6 +12,7 @@ Para realizar cálculos precisos de área y distancia, es necesario re-proyectar
 a un sistema de referencia de coordenadas proyectadas. Estos sistemas utilizan unidades lineales 
 como metros, lo que permite obtener medidas más precisas. """
 
+# Librerias 
 import geopandas as gpd
 import pandas as pd
 import os
@@ -75,14 +76,8 @@ for tecnologia in tecnologias:
         df_final.rename(columns={'UBIGEO_x': 'UBIGEO'}, inplace=True)
         df_final.drop(columns=['UBIGEO_y'], errors='ignore', inplace=True)
 
-
         # Rellenar valores NaN con 0
         df_final[f'area_km2-{tecnologia}-{tipo_cobertura}'].fillna(0, inplace=True)
-
-        # Guardar el DataFrame en un archivo Excel
-        output_excel1 = os.path.join(base_dir, f'area_km2-{tecnologia}-{tipo_cobertura}')
-        df_final.to_excel(output_excel1, index=False)
-        print(f'Archivo Excel guardado en: {output_excel1}')
 
 
 # Guardar el DataFrame final en un solo archivo Excel
