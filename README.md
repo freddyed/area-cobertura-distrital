@@ -7,7 +7,7 @@ This repository contains a Python script that processes mobile coverage maps and
 *   📍 Geospatial Processing: Uses `geopandas` to read and manipulate shapefiles (.shp).
 *   🌎 Coordinate System Transformation: Converts geometries from geographic coordinates (EPSG:4326) to a projected system (EPSG:32718) to ensure accurate area calculations.
 *   📡 Mobile Coverage Analysis: Supports multiple mobile technologies: 2G, 3G, 4G, and 5G.
-*   🏢 Telecom Operators: Processes coverage data for the four main operators in Peru: Bitel, Claro, Entel, and Movistar.
+*   🏢 Telecom Operators: Processes coverage data for the four main operators in Peru.
 *   📊 District-Level Intersection: Intersects mobile coverage layers with district boundaries to calculate the covered area per district.
 *   📂 Excel Report Generation: Exports the results to an Excel file (.xlsx) with structured data for further analysis.
 
