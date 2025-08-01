@@ -22,9 +22,9 @@ tipos_cobertura = ['cobertura_adicional', 'cobertura_garantizada']  # Lista de t
 
 
 # Directorio base
-base_dir = 'C:/Users/fhuillca/Desktop/Mapas inter-disueltos/'
+base_dir = '/Mapas inter-disueltos/'
 
-ruta_shp_ccpp_urbano = 'C:/Users/fhuillca/Documents/DPRC/Análisis Regulatorio/Checa tu señal/SHP CCPP/ShpCCPPCiudades/CiudadesCorregidoCcpp_oct2022.shp'
+ruta_shp_ccpp_urbano = '/CiudadesCorregidoCcpp_oct2022.shp'
 ccpp_urbano = gpd.read_file(ruta_shp_ccpp_urbano)
 
 ccpp_urbano_km2 = ccpp_urbano.to_crs('EPSG:32718')
